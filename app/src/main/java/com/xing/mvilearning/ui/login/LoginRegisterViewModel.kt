@@ -35,7 +35,7 @@ class LoginRegisterViewModel(private val repository: Repository) : ViewModel(), 
         viewModelScope.launch {
             _state.value = LoginRegisterState.Loading
             _state.value = try {
-                LoginRegisterState.RegisterResult(repository.register())
+                LoginRegisterState.RegisterResult(repository.register("", ""))
             } catch (e: Exception) {
                 LoginRegisterState.Error(e)
             }

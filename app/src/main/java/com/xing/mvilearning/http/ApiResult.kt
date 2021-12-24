@@ -1,6 +1,6 @@
 package com.xing.mvilearning.http
 
-data class Result<T>(
+data class ApiResult<T>(
     val data: T,
     val errorCode: Int,
     val errorMsg: String
